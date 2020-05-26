@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css4</title>
 </head>
 
@@ -10,13 +11,11 @@
         font-size: 625%;
     }
 
-    body {
+   body {
         padding: 0;
         margin: 0;
         background-color: #eff0f4;
         color: white;
-        height: 12.8rem;
-        width: 100%;
     }
 
     a {
@@ -24,133 +23,85 @@
         color: white;
     }
 
-    .clear {
-        clear: both;
-    }
-
     .header {
         background-color: #5fc0cd;
-        height: 0.36rem;
-        width: auto;
-        text-align: center;
-        font-size: 0.36rem;
-        padding: 0.32rem 1rem;
+        height: .44rem;
+        font-size: .18rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .header #close {
-        float: left;
-        font-size: 0.32rem;
+        font-size: .16rem;
+        padding-left: .15rem;
     }
 
     .header #logon {
-        float: right;
-        font-size: 0.32rem;
-    }
-
-    .input_box {
-        height: 1rem;
-        background-color: white;
-        position: relative;
-        top: 0.3rem;
+        font-size: .16rem;
+        padding-right: .15rem;
 
     }
-
-    .input_box img {
-        float: left;
-        position: absolute;
-        height: 0.41rem;
-        width: 0.27rem;
-        top: 0.28rem;
-        left: 0.5rem;
-
+    .input_box{
+        background-color:#ffffff;
+        margin-top:  .08rem;
+        display: flex;
+        align-items: center;
+        height:.54rem;
     }
-
-    .input_box span {
-        position: absolute;
-        top: 0.2rem;
-        left: 1.2rem;
-        background-color: #a7a7a7;
-        height: 0.6rem;
-        width: 0.02rem;
+    .input_box img{
+        height:.25rem;
+        width:.17rem;
+        padding: .15rem .25rem;
     }
-
-    @media only screen and (min-width: 1000px) {
-        .input_box input {
-            width:90%;
-        }
+    .input_box input{
+        flex-grow:2;
+        height:.25rem;
+        border:none;
+        border-left: 0.005rem solid #e7e7e7;;
+        padding-left:.18rem;
+        font-size:.16rem;
+        outline: medium;
     }
-
-    .input_box input {
-        outline: none;
-        float: right;
-        height: 1rem;
-        width: 85%;
-        padding: 0;
-        margin: 0;
-        border: 0;
-        font-size: 0.24rem;
+    .submit_box{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:flex-end;
     }
-
-    #input_box_1 {
-        margin: 0.3rem 0 0.7rem 0;
-    }
-
-    .submit_box {
-
-    }
-
-    .submit_box button {
-        width: 100%;
-        height: 1rem;
-        font-size: 0.36rem;
-        color: white;
-        border: 0;
-        padding: 0;
-        margin: 0;
+    .submit_box button{
+        height:.5rem;
+        width:100%;
         background-color: #5fc0cd;
+        font-size: .18rem;
+        color:#fff;
+        outline: none;
     }
-
-    button:hover {
-        cursor: pointer
-    }
-
-    .submit_box a {
+    .submit_box a{
         text-decoration: underline;
-        font-size: 0.32rem;
-        float: right;
         color: #5fc0cd;
-        margin: 0.2rem 0.5rem 0 0;
+        font-size: .16rem;
+        padding:.15rem .16rem;
     }
-
-
 </style>
 <body>
 <div>
     <div class="header">
         <a id="close" href="#">关闭</a>
-        登录
+        <div>登录</div>
         <a id="logon" href="#">注册</a>
-        <div class="clear"></div>
     </div>
-    <div>
-        <div class="input_box">
-            <img src="img/css4_iphone.png" height="41" width="27"/>
-            <span></span>
-            <input placeholder="请输入手机号" type="text">
-        </div>
-        <div class="input_box" id="input_box_1">
-
-            <img src="img/css4_locked.png" height="43" width="29"/>
-            <span></span>
-            <input placeholder="请输入密码" type="password">
-        </div>
+    <div class="input_box">
+        <img src="img/css4_iphone.png"/>
+        <input placeholder="请输入手机号" type="text">
+    </div>
+    <div class="input_box">
+        <img src="img/css4_locked.png"/>
+        <input placeholder="请输入密码" type="password">
     </div>
     <div class="submit_box">
         <button type="submit">登录</button>
         <a href="#">忘记密码</a>
-        <div class="clear"></div>
     </div>
-
 </div>
 
 </body>
